@@ -15,3 +15,27 @@ margin-top: 5%;
 width:50%;
 margin-top: 5%;
 }
+
+#topicCard{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#newTopic{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#meInput{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#interestWell{
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}

@@ -37,6 +37,14 @@ app.get('/vet', function(request, response) {
   response.render('pages/vet');
 });
 
+app.get('/topics', function(request, response) {
+  response.render('pages/talk');
+});
+
+app.get('/convos', function(request, response) {
+  response.render('pages/talk');
+});
+
 app.get('/talk', function(request, response) {
   response.render('pages/talk');
 });

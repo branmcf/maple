@@ -25,6 +25,26 @@ app.get('/menu', function(request, response) {
   response.render('pages/menu');
 });
 
+app.get('/view', function(request, response) {
+  response.render('pages/view');
+});
+
+app.get('/new', function(request, response) {
+  response.render('pages/new');
+});
+
+app.get('/vet', function(request, response) {
+  response.render('pages/vet');
+});
+
+app.get('/talk', function(request, response) {
+  response.render('pages/talk');
+});
+
+app.get('/me', function(request, response) {
+  response.render('pages/me');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

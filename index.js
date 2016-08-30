@@ -38,11 +38,11 @@ app.get('/vet', function(request, response) {
 });
 
 app.get('/topics', function(request, response) {
-  response.render('pages/talk');
+  response.render('pages/topics');
 });
 
 app.get('/convos', function(request, response) {
-  response.render('pages/talk');
+  response.render('pages/convos');
 });
 
 app.get('/talk', function(request, response) {

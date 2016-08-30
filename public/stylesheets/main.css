@@ -8,5 +8,10 @@
 
 #loginForm{
 width:50%;
-margin-top: 20%;
+margin-top: 5%;
+}
+
+#signUpForm{
+width:50%;
+margin-top: 5%;
 }

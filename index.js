@@ -21,6 +21,10 @@ app.get('/signup', function(request, response) {
   response.render('pages/signup');
 });
 
+app.get('/menu', function(request, response) {
+  response.render('pages/menu');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

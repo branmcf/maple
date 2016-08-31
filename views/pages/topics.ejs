@@ -17,13 +17,13 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-	      <tr>
+	      <tr class="clickable-row" data-href="/convos">
 	        <td>USA water polo</td>
 	      </tr>
-	      <tr>
+	      <tr class="clickable-row" data-href="/convos">
 	        <td>Iphone 7 release</td>
 	      </tr>
-	      <tr>
+	      <tr class="clickable-row" data-href="/convos">
 	        <td>SMU Football</td>
 	      </tr>
 	    </tbody>
@@ -31,3 +31,11 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+</script>

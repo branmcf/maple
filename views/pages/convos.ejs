@@ -17,13 +17,13 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-	      <tr>
+	      <tr class="clickable-row" data-href="/talk">
 	        <td>appleGuy123</td>
 	      </tr>
-	      <tr>
+	      <tr class="clickable-row" data-href="/talk">
 	        <td>num1eaglesfan</td>
 	      </tr>
-	      <tr>
+	      <tr class="clickable-row" data-href="/talk">
 	        <td>fred22</td>
 	      </tr>
 	    </tbody>
@@ -31,3 +31,11 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+</script>

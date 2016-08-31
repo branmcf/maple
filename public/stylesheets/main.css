@@ -28,8 +28,10 @@
 
 #bs-example-navbar-collapse-1{
   text-align: center;
-  float: right !important
+  float: right !important;
+  color: black;
 }
+
 
 @media (min-width: 768px) {
   #navbarContainer{

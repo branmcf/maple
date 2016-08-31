@@ -1,0 +1,41 @@
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  height: 35vh;
+  text-align: center;
+}
+
+#loginForm{
+width:50%;
+margin-top: 5%;
+}
+
+#signUpForm{
+width:50%;
+margin-top: 5%;
+}
+
+#topicCard{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#newTopic{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#meInput{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#interestWell{
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}

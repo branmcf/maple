@@ -169,6 +169,12 @@ color: black;
   color: black;
 }
 
+@media (max-width: 990px) {
+  #homeDiv{
+    height: 60vh;
+  }
+}
+
 
 #loginDiv{
   height:20vh;

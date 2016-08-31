@@ -174,6 +174,7 @@ color: black;
   height:20vh;
   background: #c8102e;
   text-align: center;
+
 /*  border: 2px solid black;*/
 }
 
@@ -186,6 +187,8 @@ color: black;
   height:20vh;
   background: #a2a569;
   text-align: center;
+ 
+  
 }
 
 #signupDiv h1{
@@ -247,3 +250,7 @@ background: #e5e1e6;
   text-align: center;
 }
 
+#btnRow{
+white-space: nowrap;
+overflow: hidden;
+}

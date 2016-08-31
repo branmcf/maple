@@ -23,7 +23,24 @@
 #navbarContainer{
   margin:0;
   padding:0;
-  text-align: right;
+  text-align: center;
+}
+
+#bs-example-navbar-collapse-1{
+  text-align: center;
+  float: right !important
+}
+
+@media (min-width: 768px) {
+  #navbarContainer{
+    float: right !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #bs-example-navbar-collapse-1{
+    float: none !important;
+  }
 }
 
 #loginForm{
@@ -66,9 +83,20 @@ color: black;
   margin: auto;
 }*/
 
+#topicCardDivNoResize{
+  background: #e5e1e6;
+  height: 72vh;
+}
+
 #topicCardDiv{
   background: #e5e1e6;
   height: 72vh;
+}
+
+@media (max-width: 990px) {
+  #topicCardDiv{
+    height: 52vh;
+  }
 }
 
 #topicAcceptDiv{
@@ -206,6 +234,7 @@ color: black;
   height: 70vh;
 }
 
+
 #submitTopic{
   background: #a2a569;
 }
@@ -260,3 +289,40 @@ background: #e5e1e6;
 white-space: nowrap;
 overflow: hidden;
 }
+
+/*navbar stuff*/
+@media (max-width: 768px) {
+    .navbar-header {
+        float: right;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+/*end navbar stuff*/

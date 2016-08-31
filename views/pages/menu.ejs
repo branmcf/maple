@@ -6,16 +6,41 @@
 </head>
 
 <body>
-<% include ../partials/nav.ejs %>
-<div class = "container-fluid">
-  <div class = "Absolute-Center" id = "">
-    <h1>Menu</h1>
-    <button class="btn btn-default" type="submit">View</button>
+	<a href="/view">
+		<div class = "menuItem" id="menuViewItem">
+			<h1>VIEW</h1>
+		</div>
+	</a>
+
+	<a href="/new">
+		<div class = "menuItem" id="menuNewItem">
+			<h1>NEW</h1>
+		</div>
+	</a>
+
+	<a href="/vet">
+		<div class = "menuItem" id="menuVetItem">
+			<h1>VET</h1>
+		</div>
+	</a>
+
+	<a href="/topics">
+		<div class = "menuItem" id="menuTalkItem">
+			<h1>TALK</h1>
+		</div>
+	</a>
+
+	<a href="/me">
+		<div class = "menuItem" id="menuMeItem">
+			<h1>ME</h1>
+		</div>
+	</a>
+
+</body>
+
+<!--<button class="btn btn-default" type="submit">View</button>
     <button class="btn btn-default" type="submit">New</button>
     <button class="btn btn-default" type="submit">Vet</button>
     <button class="btn btn-default" type="submit">Talk</button>
-    <button class="btn btn-default" type="submit">Me</button>
-  </div>
-</div>
-</body>
+    <button class="btn btn-default" type="submit">Me</button> -->
 </html>

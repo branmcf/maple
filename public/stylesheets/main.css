@@ -6,20 +6,91 @@
   text-align: center;
 }
 
+.container-fluid{
+  padding-right: 0;
+}
+
+.row{
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.navbar-static-top{
+  margin-bottom: 0;
+}
+
+#navbarContainer{
+  margin:0;
+  padding:0;
+  text-align: right;
+}
+
 #loginForm{
-width:50%;
-margin-top: 5%;
+width: 100%;
+height:100vh;
+background: #c8102e;
+color: black;
+}
+
+#loginForm h1{
+text-align: center;
+}
+
+#loginForm form{
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
 }
 
 #signUpForm{
-width:50%;
-margin-top: 5%;
+width:100%;
+height:100vh;
+background: #a2a569;
+color: black;
 }
 
-#topicCard{
+#signUpForm h1{
+  text-align: center
+}
+
+#signUpForm form{
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+/*#topicCard{
   width: 50%;
   text-align: center;
   margin: auto;
+}*/
+
+#topicCardDiv{
+  background: #e5e1e6;
+  height: 72vh;
+}
+
+#topicAcceptDiv{
+  height:20vh;
+  background: #a2a569;
+  text-align: center;
+}
+
+#topicAcceptDiv h1{
+  margin: 0;
+  color: black;
+}
+
+#topicPassDiv{
+  height:20vh;
+  background: #c8102e;
+  text-align: center;
+}
+
+#topicPassDiv h1{
+  margin: 0;
+  color: black;
 }
 
 #newTopic{
@@ -39,3 +110,140 @@ margin-top: 5%;
   text-align: center;
   margin: auto;
 }
+
+.menuItem{
+  height:20vh;
+  text-align: center;
+}
+
+#menuViewItem{
+  background: #e5e1e6;
+}
+
+#menuViewItem h1{
+  margin: 0;
+  color: black;
+}
+
+#menuNewItem{
+  background: #a2a569;
+}
+
+#menuNewItem h1{
+  margin: 0;
+  color: black;
+}
+
+#menuVetItem{
+  background: #dcd59a;
+}
+
+#menuVetItem h1{
+  margin: 0;
+  color: black;
+}
+
+#menuTalkItem{
+  background: #e8927c;
+}
+
+#menuTalkItem h1{
+  margin: 0;
+  color: black;
+}
+
+#menuMeItem{
+  background: #c8102e;
+}
+
+#menuMeItem h1{
+  margin: 0;
+  color: black;
+}
+
+#homeDiv{
+  height:80vh;
+  background: #e5e1e6;
+  text-align: center;
+  padding-top: 15%;
+  color: black;
+}
+
+
+#loginDiv{
+  height:20vh;
+  background: #c8102e;
+  text-align: center;
+/*  border: 2px solid black;*/
+}
+
+#loginDiv h1{
+  margin: 0;
+  color:black;
+}
+
+#signupDiv{
+  height:20vh;
+  background: #a2a569;
+  text-align: center;
+}
+
+#signupDiv h1{
+  margin: 0;
+  color:black;
+}
+
+#viewTopics{
+  height: 70vh;
+}
+
+#submitTopic{
+  background: #a2a569;
+}
+
+#submitTopic h1{
+  margin: 0;
+  color: black;
+
+}
+
+#topicList{
+  background: #e5e1e6;
+  height: 100vh;
+}
+
+#convoList{
+  background: #e5e1e6;
+  height: 100vh;
+}
+
+#chatView{
+  background: #e5e1e6;
+  height: 100vh;
+  padding: 0;
+}
+
+#addFile{
+  color:black;
+}
+
+#sendMsg{
+  color:black;
+}
+
+#convoNavRow{
+  background: #c8102e;
+  height: 5vh;
+  margin-left:0px;
+  margin-right:0px; 
+}
+
+#convoContainer{
+padding:0;
+background: #e5e1e6;
+}
+
+#chatNavHeader{
+  text-align: center;
+}
+

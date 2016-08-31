@@ -7,15 +7,17 @@
 
 <body>
 <% include ../partials/nav.ejs %>
-<div class = "container-fluid">
-  <div class = "Absolute-Center" id = "">
-    <h1>new</h1>
-      <div class="form-group" id="newTopic">
-	    <input class="form-control input-lg" id="inputlg" type="text" placeholder="Type the topic you want to talk about">
-	  </div>
-	  <br>
-	<button class="btn btn-default" type="submit">Submit</button>
+<div class = "row" id="topicCardDiv">
+  <div class = "container-fluid" id = "viewTopics">
+    <h1 style="text-align:center;">Type the topic you want to talk about</h1>
+	<br>
   </div>
 </div>
+
+  <a href="">
+  	<div class = "menuItem" id="submitTopic">
+  		<h1>Submit</h1>
+	</div>
+</a>
 </body>
 </html>

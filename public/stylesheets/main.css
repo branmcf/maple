@@ -408,8 +408,9 @@ overflow: hidden;
 
 #searchBox{
   height: 100%;
-  width: 100%;
+  width: 80%;
   color: #1f1f2c;
+  float: left;
 }
 
 #newTopicText{
@@ -417,7 +418,15 @@ overflow: hidden;
   width: 100%;
   color: #1f1f2c;
   resize: none;
+}
 
+#addInterestBtn{
+  height: 100%;
+  width: 20%;
+  color: white;
+  background: #1f1f2c;
+  border: 0;
+  box-shadow:none;
 }
 
 /*navbar stuff*/

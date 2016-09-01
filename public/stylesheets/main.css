@@ -1,3 +1,7 @@
+body{
+  width: 100%;
+}
+
 .Absolute-Center {
   margin: auto;
   position: absolute;
@@ -36,7 +40,8 @@
 
 #navbarLogo{
   color:white;
-  margin-left: 5px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 #navbarContainer{
@@ -68,7 +73,8 @@
 }
 
 td:hover{
-  background: #e8927c;
+  background: white;
+  color:#1f1f2c;
 }
 
 th{
@@ -411,6 +417,7 @@ overflow: hidden;
   width: 80%;
   color: #1f1f2c;
   float: left;
+  border-radius: 0px;
 }
 
 #newTopicText{

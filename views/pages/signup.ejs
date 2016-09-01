@@ -6,28 +6,113 @@
 </head>
 
 <body>
+<div id="messages"></div>
 <div class="container-fluid" id="signUpForm">
 	<h1>Sign Up</h1>
-	<form>
-	  <div class="form-group">
+	<form id="suForm">
+	  <div id="email-group" class="form-group">
 	    <label>Email address</label>
-	    <input type="email" class="form-control" id="" placeholder="Email">
+	    <input type="email" class="form-control" id="" placeholder="Email" name="email">
+	    <span class="help-block"></span>
 	  </div>
-	  <div class="form-group">
+	  <div id="username-group" class="form-group">
 	    <label>Username</label>
-	    <input type="email" class="form-control" id="" placeholder="Username">
+	    <input type="email" class="form-control" id="" placeholder="Username" name="username">
+	    <span class="help-block"></span>
 	  </div>
-	  <div class="form-group">
+	  <div id="password-group" class="form-group">
 	    <label>Password</label>
-	    <input type="password" class="form-control" id="" placeholder="Password">
+	    <input type="password" class="form-control" id="" placeholder="Password" name="password">
+	    <span class="help-block"></span>
 	  </div>
-	  <div class="form-group">
+	  <div  id="passwordRe-group" class="form-group">
 	    <label>Re-enter Password</label>
-	    <input type="password" class="form-control" id="" placeholder="Re-enter Password">
+	    <input type="password" class="form-control" id="" placeholder="Re-enter Password" name="passwordRe">
+	    <span class="help-block"></span>
 	  </div>
-	  <a type="submit" class="btn btn-default" href="/login">Submit</a>
+	  <a type="submit" class="btn btn-default">Submit</a>
 	</form>
 </div>
 
 </body>
 </html>
+
+<!-- From Submission -->
+<script>
+$(document).ready(function() {
+
+// process the form
+$('form').submit(function(event) {
+
+  // remove the past errors
+  $('#email-group').removeClass('has-error');
+  $('#email-group .help-block').empty();
+  $('#username-group').removeClass('has-error');
+  $('#username-group .help-block').empty();
+  $('#password-group').removeClass('has-error');
+  $('#password-group .help-block').empty();
+  $('#passwordRe-group').removeClass('has-error');
+  $('#passwordRe-group .help-block').empty();
+
+
+  // remove success messages
+  $('#messages').removeClass('alert alert-success').empty();
+
+  // get the form data
+  var formData = {
+      'email'              : $('input[name=email]').val(),
+      'username'    : $('input[name=username]').val(),
+      'password'    : $('input[name=password]').val(),
+      'passwordRe'    : $('input[name=passwordRe]').val()
+  };
+
+  // process the form
+  $.ajax({
+    type        : 'POST',
+    url         : '../PHP/process.php',
+    data        : formData,
+    dataType    : 'json',
+    success     : function(data) {
+
+      // log data to the console so we can see
+      console.log(data);
+
+      // if validation fails
+      // add the error class to show a red input
+      // add the error message to the help block under the input
+      if ( ! data.success) {
+
+        if (data.errors.name) {
+          $('#email-group').addClass('has-error');
+          $('#email-group .help-block').html(data.errors.name);
+        }
+
+        if (data.errors.superheroAlias) {
+          $('#username-group').addClass('has-error');
+          $('#username-group .help-block').html(data.errors.superheroAlias);
+        }
+
+        if (data.errors.name) {
+          $('#password-group').addClass('has-error');
+          $('#password-group .help-block').html(data.errors.name);
+        }
+
+        if (data.errors.name) {
+          $('#passwordRe-group').addClass('has-error');
+          $('#passwordRe-group .help-block').html(data.errors.name);
+        }
+
+      } else {
+
+        // if validation is good add success message
+        $('#messages').addClass('alert alert-success').append('<p>' + data.message + '</p>');
+      }
+    }
+  });
+
+  // stop the form from submitting and refreshing
+  event.preventDefault();
+});
+
+});
+</script>

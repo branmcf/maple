@@ -271,6 +271,21 @@ color: white;
   }
 }
 
+#viewAddition{
+  height: 10vh;
+  color:white;
+  border:2px solid white;
+  margin: 10% 40px 20px 40px;
+  display: block;
+}
+
+/*@media (max-width: 990px) {
+  #viewAddition{
+    height: 44vh;
+  }
+}*/
+
+
 #viewInterests{
   height: 67vh;
   color:white;
@@ -389,6 +404,20 @@ background: #e5e1e6;
 #btnRow{
 white-space: nowrap;
 overflow: hidden;
+}
+
+#searchBox{
+  height: 100%;
+  width: 100%;
+  color: #1f1f2c;
+}
+
+#newTopicText{
+  height: 100%;
+  width: 100%;
+  color: #1f1f2c;
+  resize: none;
+
 }
 
 /*navbar stuff*/

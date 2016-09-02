@@ -1,12 +1,16 @@
 var express = require('express');
+var bodyParser = require("body-parser");
 var app = express();
 
-var routes = require('./routes/routes')
+var routes = require('./routes/routes');
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.json());
 app.use('/', routes);
+
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');

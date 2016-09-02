@@ -37,7 +37,7 @@ function createUser(req, res) {
 
 function getUser(req, res) {
   var user_id = req.params.id;
-  mongodb.MongoClient.connect("mongodb://heroku_54tn5qdb:qveck2o5r9939ml2ql27ng1qv@ds019756.mlab.com:19756/heroku_54tn5qdb", function (err, db) {
+  mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, db) {
     db.collection("users").find({"user_id" : user_id}).toArray(function(err, docs) {
       if (err) {
         handleError(res, err.message, "Failed to get specific user.");

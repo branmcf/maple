@@ -5,8 +5,9 @@ var db = require('../queries');
 
 
 router.get('/api/users', db.getAllUsers);
+router.get('/api/user/:id', db.getUser);
 //router.get('/api/puppies/:id', db.getSinglePuppy);
-router.post('/api/users/:id', db.createUser);
+router.post('/api/users', db.createUser);
 //router.put('/api/puppies/:id', db.updatePuppy);
 //router.delete('/api/puppies/:id', db.removePuppy);
 

@@ -1,37 +1,39 @@
-var promise = require('bluebird');
-
-var options = {
-	// Initialization Options
-	promiseLib: promise
-};
-
-var pgp = require('pg-promise')(options);
-var config = {
-	host: 'ec2-54-221-225-43.compute-1.amazonaws.com',
-	port: 5432,
-	database: 'd47cpr1n42gt7a',
-	user: 'jdwvjhzufdscyl',
-	password: 'z_yWhxmMJlhBm_hgyUrul1tH1F',
-	ssl: true
-};
-
-var db = pgp(config);
+var mongodb = require("mongodb");
 
 module.exports = {
-	getAllUsers: getAllUsers
+	getAllUsers: getAllUsers,
+  createUser: createUser
 };
 
+var db;
+
 function getAllUsers(req, res, next) {
-  db.any('select * from pups')
-    .then(function (data) {
-      res.status(200)
-        .json({
-          status: 'success',
-          data: data,
-          message: 'Retrieved ALL puppies'
-        });
+  mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, db) {
+    db.collection("users").find({}).toArray(function(err, docs) {
+      if (err) {
+        handleError(res, err.message, "Failed to get users.");
+      } else {
+        res.status(200).json(docs);
+      }
     })
-    .catch(function (err) {
-      return next(err);
+  });
+}
+
+function createUser(req, res) {
+  var newUser = req.body;
+  newUser.time_joined = new Date();
+  newUser.user_rating = 0.0;
+  var random_user_id = Math.random().toString(36).slice(2);
+  console.log(newUser);
+  /*
+  mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, db) {
+    db.collection("users").insertOne(newContact, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new contact.");
+      } else {
+        res.status(201).json(doc.ops[0]);
+      }
     });
+  });
+  */
 }
